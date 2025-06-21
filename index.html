@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+      <script>
+  window.pixelId = "67edf4c3c10671e61577006d";
+  var a = document.createElement("script");
+  a.setAttribute("async", "");
+  a.setAttribute("defer", "");
+  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+  document.head.appendChild(a);
+</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/favi.webp" type="image/png" />
+    <title>Ajude Agora!</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/glide.core.min.css" />
+    <link rel="stylesheet" href="css/glide.theme.min.css" />
+    <link rel="stylesheet" href="css/modal.css" />
+    <script src="js/qrcode.min.js"></script>
+  </head>
+<script>
+  // Parâmetros que você quer passar adiante
+  const paramsToKeep = [
+    "utm_source",
+    "utm_campaign",
+    "utm_medium",
+    "utm_content",
+    "utm_term",
+    "xcod"
+  ];
+
+  function getCurrentParams() {
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const result = {};
+    paramsToKeep.forEach(param => {
+      const value = urlSearchParams.get(param);
+      if (value) result[param] = value;
+    });
+    return result;
+  }
+
+  function buildQueryString(params) {
+    return Object.entries(params)
+      .map(([key, val]) => ${encodeURIComponent(key)}=${encodeURIComponent(val)})
+      .join("&");
+  }
+
+  function updateInternalLinks() {
+    const links = document.querySelectorAll("a[href]");
+    const currentParams = getCurrentParams();
+    if (Object.keys(currentParams).length === 0) return;
+
+    links.forEach(link => {
+      const href = link.getAttribute("href");
+
+      // Só aplica em links relativos (ou seja, dentro do site)
+      if (href.startsWith("/") || href.startsWith(window.location.origin)) {
+        const url = new URL(href, window.location.origin);
+        const linkParams = new URLSearchParams(url.search);
+
+        // Adiciona os parâmetros desejados
+        for (const key in currentParams) {
+          linkParams.set(key, currentParams[key]);
+        }
+
+        url.search = linkParams.toString();
+        link.setAttribute("href", url.pathname + url.search);
+      }
+    });
+  }
+
+  // Quando a página carregar, atualiza os links
+  document.addEventListener("DOMContentLoaded", updateInternalLinks);
+</script>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <a>
+            <img src="images/ajudelogo.png" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="post">
+      <h3>
+        💔Uma voz que não se cala: Suhaib e a luta por esperança em meio à guerra🌍
+      </h3>
+      <img src="images/isra44.jpeg" />
+      <div class="image-container">
+        <div class="likes-container">
+          <img src="images/boll.png" alt="Corações" />
+          <!-- Mini Imagem que você carregou -->
+          <span>117 corações recebidos ❤️</span>
+        </div>
+      </div>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>Enquanto bombas caem e cidades inteiras são destruídas, há quem insista em falar de vida , de resistência , de esperança .</strong></p>
+
+      <p> Conheça Suhaib — um jovem corajoso que vive em uma das regiões mais afetadas pelos bombardeamentos. <strong>Mesmo diante do medo, da escassez e da dor, ele usa sua voz e suas redes sociais para mostrar ao mundo o que realmente está acontecendo. Ele compartilha vídeos, fotos, relatos reais — tudo para que ninguém vire as costas para o sofrimento alheio.</strong> <strong>Suhaib não só denuncia a guerra — ele ajuda a salvar vidas.</strong>.
+      </p>
+
+      <p>
+        <strong>Ele próprio perdeu parte de sua casa, viu amigos partirem, mas nunca deixou de estender a mão ao próximo. E agora, ele faz parte dessa corrente de solidariedade que estamos construindo aqui.</strong>.
+      </p>
+
+      <p>
+        <strong>Ele será nosso ponto de contato direto no campo , garantindo que cada doação feita através deste site chegue realmente às pessoas que precisam .</strong>
+
+      </p>
+
+      <p>
+         <strong>💬 "Por que ajudar se eu estou tão longe?"</strong>.
+      </p>
+
+      <p>
+        "<strong> Porque a guerra não escolhe fronteiras.
+E a solidariedade também não precisa delas .
+
+Cada postagem de Suhaib nos mostra o rosto da guerra: crianças feridas, famílias desabrigadas, hospitais superlotados, alimentos escassos... Mas ele também mostra algo mais forte: o desejo de viver, de resistir, de recomeçar . </strong
+        >"
+      </p>
+
+      <p>
+        E é isso que queremos apoiar.
+
+        É essa força que vamos fortalecer com sua ajuda.
+
+
+
+        <strong>❤️ Sua doação salva vidas reais</strong> 
+      </p>
+
+      <p>
+        <strong>Com Suhaib no chão, você pode ter certeza de que seu gesto de amor vai além da tela</strong>.
+      </p>
+
+      <p>
+        Com o apoio de pessoas como você, vamos enviar alimentos, água potável, medicamentos, cobertores e kits de higiene para quem está sobrevivendo em abrigos improvisados, sem acesso básico a nada.
+      </p>
+
+      <p>
+        E Tem mais: <strong>uma rede de empresários brasileiros comprometeu-se a dobrar o valor de todas as doações acima de R$100 </strong>aumentando ainda mais o impacto do seu coração generoso.
+      </p>
+      <p>
+Doe R$100 → Virará <strong>R$200</strong>
+</p>
+<p>
+Doe R$500 → Virará <strong>R$1.000</strong>
+</p>
+<p>
+Doe R$1.000 → Virará <strong>R$2.000</strong>
+</p>
+      <p>
+       <strong> 🙏 Doe agora e faça parte da mudança</strong>
+      </p>
+<a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p>
+        Isso significa que <strong> cada centavo seu terá o dobro do poder </strong> para ajudar quem precisa urgentemente de apoio. Sua generosidade será multiplicada.
+
+      </p><strong>🛠️ Como vamos utilizar 100% das doações?</strong>
+
+<p>
+Toda e qualquer quantia arrecadada será usada para levar socorro imediato às populações atingidas, através de parcerias com organizações humanitárias locais e internacionais. Seus recursos serão destinados a:
+</p>
+<p>
+🔹 <strong>Alimentação básica</strong> : cestas de emergência, água potável e kits nutricionais para crianças e idosos.
+</p>
+<p>
+🔹 <strong>Acesso à saúde </strong>: medicamentos essenciais, curativos, vacinas e suporte médico básico.
+</p>
+<p>
+  🔹 <strong>Abrigo temporário</strong> : tendas, cobertores, colchonetes e materiais de higiene pessoal.
+<p>🔹 <strong>Apoio psicológico </strong>: suporte a crianças e adultos traumatizados pela guerra.
+</p>
+<p>
+🔹 <strong>Reconstrução de lares</strong> : apoio à reconstrução de moradias destruídas para devolver dignidade às famílias.
+</p>
+
+      <p>
+        Nossa missão é garantir que cada real doado chegue até quem realmente precisa . Relatórios atualizados com fotos, vídeos e relatos reais estarão disponíveis aqui no site regularmente para manter a transparência total com todos os doadores.
+      </p>
+      <img src="images/isra55.jpeg" style="width: 90%; height: auto" />
+    
+      <p>
+        SIM  <strong>❤️ Você tem o poder de fazer a diferença na vida dessas crianças</strong>.
+      </p>
+            <p>  <strong>Se você está lendo isso agora, eu te peço com o coração aberto: nos ajude.</strong>
+</p>
+<p>
+Não estamos pedindo caridade. Estamos chamando você para ser parte de algo maior: <strong>uma corrente de amor, compaixão e resistência</strong> . Cada pessoa que ajuda, faz com que mais uma criança coma, durma aquecida, receba remédios, tenha um lugar seguro para ficar.</p>
+<p>
+<strong>Seu coração pode ser a única proteção que alguém tem hoje.</strong>
+</p>
+<p>
+ <strong>👶🏽 “Por que eu? Por que agora?”</strong>
+</p>
+<p>
+Essa é a pergunta que tantas vítimas se fazem diante da guerra.
+E a resposta pode estar em você.
+Por que você pode ajudar.
+Por que você pode mudar uma vida.
+Por que você pode dar sentido ao caos.
+</p><strong>
+Nenhuma vida é descartável. Nenhuma dor é invisível.
+E nenhuma ajuda é pequena demais.</strong>
+      </p>
+      <a href="#button-section" class="btn-anchor">
+        <button class="post-button3">DOAR AGORA</button>
+      </a>
+      <p><strong>🙏 Doe agora e ajude a reconstruir vidas</strong></p>
+      <p><strong> Aos que doarem, receberá:</strong></p>
+
+      <p><strong>● Atualizações semanais</strong> da nossa jornada</p>
+      <p><strong>● Vídeo das entregas dos mantimentos</strong> e os sorrisos das crianças</p>
+      <p><strong>● Seu nome na nossa lista de anjos</strong> (se desejar)</p>
+
+      <p>
+        <strong>Compartilhe nossa história</strong>. Cada compartilhamento é uma
+        <strong>nova chance</strong> de uma criança feliz
+      </p>
+
+      <p><strong>Que Deus abençoe você e a sua família</strong>.</p>
+
+      <p><strong>Att: Suhaib</strong>.</p>
+
+ <div id="button-section">
+        <div class="progress-content">
+          <div class="progress-text">
+            <h4>Arrecadado</h4>
+            <div class="progress-values">
+              <p>R$ 25790,41</p>
+              <p>R$ 350.000,00</p>
+            </div>
+          </div>
+          <div class="progress-container">
+            <div class="progress-bar" style="width: 6%">
+              <strong>6%</strong>
+            </div>
+          </div>
+        </div>
+<img src="images/isra66.jpeg" style="width: 90%; height: auto" />
+      <p><strong> As primeiras doações ja tiveram frutos, conseguimos ja comprar alguns mantimentos e abrigos, mas estamos longe do que precisamos... e precisamos da sua ajuda!!
+      </strong>
+        <h4 style="text-align: center;">Clique no valor <br> que deseja doar</h4>
+        <p class="donation-multiplier"><strong>✨ DOAÇÃO DUPLICADA! ✨</strong>
+         Doações a partir de R$100 serão multiplicadas por 2 pelos nossos patrocinadores e grupo de empresários que apoiam nossa campanha! Sua ajuda vale o dobro até 25/06. Não perca essa oportunidade de ajudar!</p>
+        </div>
+        </div>
+        <div class="buttons-section">
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">R$ 30</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 50</button>
+            </a>
+
+           <a href="#">
+              <button class="post-button2" style="border: 2px solid #ffcc00; box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);">R$ 100</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 150</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 250</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 350</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 450</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 600</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 900</button>
+            </a>
+          </div>
+          <div class="buttons-section1">
+            <a href="#">
+              <button class="post-button2">R$ 40</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 70</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 100</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 200</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 300</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 400</button>
+            </a>
+
+            <a href="#">
+              <button class="post-button2">R$ 500</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 700</button>
+            </a>
+            <a href="#">
+              <button class="post-button2">R$ 1000</button>
+            </a>
+          </div>
+        </div>
+          <div class="sc-jXbUNg gNPJrz">
+            <div class="sc-jXbUNg dHwLb">
+              <div class="sc-jXbUNg jbBvcf"></div>
+              <div class="sc-jXbUNg dTrGCo sc-gRtvSG fpURXW"></div>
+            </div>
+          </div>
+
+          <div class="button-pix">
+            <div class="texto" id="1">
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div class="footer-container">
+          <div class="footer-section logo-section">
+            <a>
+              <img src="images/ajudelogo.png" />
+            </a>
+          </div>
+
+          <div class="footer-bottom">
+            <p>2025 - Todos direitos reservados</p>
+          </div>
+        </div>
+      </footer>
+
+      <script data-cfasync="false" src="js/email-decode.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/pix.js"></script>
+      <script src="js/toast.js"></script>
+      <script>
+        function copyEmail() {
+          const emailText = document.getElementById('donation-email').textContent;
+          navigator.clipboard.writeText(emailText)
+            .then(() => {
+              showToast('Email copiado com sucesso!', 'success');
+            })
+            .catch(err => {
+              console.error('Erro ao copiar email: ', err);
+              showToast('Erro ao copiar email', 'error');
+            });
+        }
+
+        function showToast(message, type) {
+          const toast = document.createElement('div');
+          toast.className = 'toast ' + type;
+          toast.innerHTML = `
+            <div class="toast-content">
+              <span>${message}</span>
+            </div>
+          `;
+          document.body.appendChild(toast);
+          
+          // Mostra o toast
+          setTimeout(() => {
+            toast.classList.add('show');
+          }, 100);
+          
+          // Remove o toast após 3 segundos
+          setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => {
+              document.body.removeChild(toast);
+            }, 300);
+          }, 3000);
+        }
+      </script>
+      <style>
+        .email-donation {
+          margin: 20px auto;
+          max-width: 500px;
+          text-align: center;
+        }
+        .email-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin: 0 auto 20px;
+          padding: 12px;
+          background-color: #f5f8ff;
+          border-radius: 8px;
+          border: 1px solid #ccdeff;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          max-width: 450px;
+        }
+        #donation-email {
+          font-weight: bold;
+          color: #3366cc;
+          font-size: 16px;
+        }
+        #copy-email-btn {
+          background-color: #1e88e5;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          padding: 8px 15px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.3s;
+        }
+        #copy-email-btn:hover {
+          background-color: #1565c0;
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos da Toast */
+        .toast {
+          position: fixed;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%) translateY(100px);
+          padding: 12px 20px;
+          border-radius: 4px;
+          color: white;
+          font-weight: 500;
+          z-index: 9999;
+          opacity: 0;
+          transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+          max-width: 80%;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .toast.show {
+          transform: translateX(-50%) translateY(0);
+          opacity: 1;
+        }
+        
+        .toast.success {
+          background-color: #43a047;
+        }
+        
+        .toast.error {
+          background-color: #e53935;
+        }
+        
+        .toast-content {
+          display: flex;
+          align-items: center;
+        }
+      </style>
+  </body>
+</html>
